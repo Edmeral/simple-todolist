@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ma todolist</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href='http://fonts.googleapis.com/css?family=Oswald|Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div class="container">
+
+		<h1>Ma todolist</h1>
+
+		<ul>
+			<% if(todos) { 
+				for(var i = 0; i < todos.length; i++) { %>
+			<li><a href="supprimer/<%= i %>"><%= todos[i] %></a></li>
+			
+			<% }
+			} %>
+
+		</ul>
+
+		<form method="post" action="ajouter">
+			<label for="task">Que dois-je faire ?</label>
+			<input type="text" name="task" id="task">
+		</form>
+	</div>
+</body>
+</html>
