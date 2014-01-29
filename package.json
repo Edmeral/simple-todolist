@@ -1,10 +1,10 @@
 {
-	"name": "todolist",
+	"name": "simple-todolist",
 	"version": "0.1.0",
 	"dependencies": {
 		"express": "*",
 		"ejs": "*" 
 	},
 	"author": "Edmeral <edmeral.aissam@gmail.com>",
-	"description": "Ma super todolist"
+	"description": "My awesome todolist"
 }
