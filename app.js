@@ -26,4 +26,4 @@ app.use(express.static(__dirname + '/public'))
 	res.redirect('/');
 });
 
-app.listen(8080);
+app.listen(process.env.PORT || 8080);
