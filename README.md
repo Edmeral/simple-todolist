@@ -1,1 +1,1 @@
-Simple (too simple?) todolist app written with Node.JS using Express and the template engine EJS
+Simple (too simple?) todolist app written in Node.JS using Express and the template engine EJS
