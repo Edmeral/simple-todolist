@@ -2,6 +2,9 @@ var express = require('express');
 
 var app = express();
 
+var placeholders = ['Wash the dishes', 'Pick up the milk', 'Watch all seasons of GOT in one day', 
+					'Build the next Facebook', 'Learn how to tap dance', 'Learn Ninjutsu', 'Master Rasengan', 'Kill Madara'];
+
 app.use(express.static(__dirname + '/public'))
 
 .use(express.cookieParser())
@@ -14,7 +17,8 @@ app.use(express.static(__dirname + '/public'))
 	next();
 })
 .get('/', function(req, res) {
-	res.render('todo.ejs', {todos: req.session.todos});
+	var placeholder = placeholders[Math.floor(Math.random() * placeholders.length)];
+	res.render('todo.ejs', {todos: req.session.todos, placeholder: placeholder});
 })
 .get('/supprimer/:id', function(req, res) {
 	req.session.todos.splice(req.params.id, 1);
