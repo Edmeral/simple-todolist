@@ -2,6 +2,8 @@ var express = require('express');
 
 var app = express();
 
+var PORT = process.env.PORT || 8080;
+
 var placeholders = ['Wash the dishes', 'Pick up the milk', 'Watch all seasons of GOT in one day',
 	'Build the next Facebook', 'Learn how to tap dance', 'Learn Ninjutsu', 'Master Rasengan', 'Kill Madara'
 ];
@@ -36,4 +38,4 @@ app.use(express.static(__dirname + '/public'))
 		res.redirect('/');
 	});
 
-app.listen(process.env.PORT || 8080);
+app.listen(PORT);
