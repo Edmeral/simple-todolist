@@ -7,8 +7,8 @@ var placeholders = ['Wash the dishes', 'Pick up the milk', 'Watch all seasons of
 
 app.use(express.static(__dirname + '/public'))
 
-.use(express.cookieParser())
-.use(express.session({secret: 'todotopsecret'}))
+.use(express.cookieParser())						//
+.use(express.session({secret: 'todotopsecret'}))	//	
 .use(express.bodyParser())
 
 .use(function(req, res, next) {
@@ -17,7 +17,7 @@ app.use(express.static(__dirname + '/public'))
 	next();
 })
 .get('/', function(req, res) {
-	var placeholder = placeholders[Math.floor(Math.random() * placeholders.length)];
+	var placeholder = placeholders[Math.floor(Math.random() * placeholders.length)]; // Getting a random todo entry
 	res.render('todo.ejs', {todos: req.session.todos, placeholder: placeholder});
 })
 .get('/supprimer/:id', function(req, res) {
