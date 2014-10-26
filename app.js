@@ -39,3 +39,4 @@ app.use(express.static(__dirname + '/public'))
 	});
 
 app.listen(PORT);
+console.log("Magic at http://localhost:" + PORT);
