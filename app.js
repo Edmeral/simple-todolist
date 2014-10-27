@@ -1,4 +1,7 @@
 var express = require('express');
+var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
+var session = require('express-session');
 
 var app = express();
 
@@ -10,11 +13,13 @@ var placeholders = ['Wash the dishes', 'Pick up the milk', 'Watch all seasons of
 
 app.use(express.static(__dirname + '/public'))
 
-.use(express.cookieParser())
-	.use(express.session({
-		secret: 'todotopsecret'
+	.use(cookieParser())
+	.use(session({
+		secret: 'todotopsecret',
+		saveUninitialized: true,
+    resave: true,
 	}))
-	.use(express.bodyParser())
+	.use(bodyParser.urlencoded({ extended: true }))
 
 .use(function(req, res, next) {
 	if (!req.session.todos)
