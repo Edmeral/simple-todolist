@@ -1,31 +1,35 @@
 body {
 	font-family: 'Lato', Arial, sans-serif;
 	color: #333332;
-			
+
 }
 h1 {
 	font-family: 'Oswald';
 }
+
 input {
-	display: block;
-	color: #9A9AA1;
-  	font-family: 'Open Sans';
-  	font-size: 90%;
-  	margin-top: 12px;
-  	border: 1px solid #ccc;
-  	background: none;
-	border-radius: 3px;
-	padding: 7px;
-	outline: none;
-	width: 100%;
+display: block;
+color: #9A9AA1;
+font-family: 'Open Sans';
+font-size: 90%;
+margin-top: 12px;
+border: 1px solid #ccc;
+background: none;
+border-radius: 3px;
+padding: 7px;
+outline: none;
+width: 100%;
 }
+
 a, a:visited {
 	text-decoration: none;
 	color: #333332;
 }
+
 a:hover {
 	text-decoration: line-through;
 }
+
 .container {
 	width: 30%;
 	padding-left: 35%;
